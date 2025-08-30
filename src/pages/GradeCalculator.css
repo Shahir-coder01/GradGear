@@ -1,0 +1,194 @@
+/* GradeCalculator.css */
+.grade-calculator-page {
+    padding: 2rem;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2.5rem;
+  }
+  
+  .calculator-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .calculator-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #121212;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #00a86b;
+    box-shadow: 0 0 0 2px rgba(0, 168, 107, 0.2);
+  }
+  
+  .error-message {
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .calculate-btn, .reset-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .calculate-btn {
+    background-color: #00a86b;
+    color: white;
+    flex: 2;
+  }
+  
+  .calculate-btn:hover {
+    background-color: #009259;
+    transform: translateY(-2px);
+  }
+  
+  .reset-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    flex: 1;
+  }
+  
+  .reset-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .result-section {
+    flex: 1;
+    min-width: 300px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 2rem;
+  }
+  
+  .result-section h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #00a86b;
+  }
+  
+  .result-details {
+    margin-bottom: 2rem;
+  }
+  
+  .result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .result-label {
+    font-weight: 500;
+  }
+  
+  .result-value {
+    font-weight: 600;
+  }
+  
+  .total, .grade {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border-bottom: none;
+    font-size: 1.2rem;
+  }
+  
+  .grade .result-value {
+    font-size: 1.5rem;
+    color: #00a86b;
+    font-weight: 700;
+  }
+  
+  .grade-explanation {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .grade-explanation h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .grade-scale {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .grade-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .grade-row span {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .calculator-container {
+      flex-direction: column;
+    }
+    
+    .button-group {
+      flex-direction: column;
+    }
+    
+    .calculate-btn, .reset-btn {
+      width: 100%;
+    }
+  }

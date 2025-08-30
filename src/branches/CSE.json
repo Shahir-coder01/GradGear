@@ -1,0 +1,73 @@
+{
+  "name": "Computer Science Engineering",
+  "code": "CSE",
+  "semesters": {
+    "Semester 1": [
+      "Engineering Mathematics I", 
+      "Engineering Physics", 
+      "Engineering Chemistry", 
+      "Engineering Graphics", 
+      "Introduction to Computing and Problem Solving",
+      "Engineering Mechanics",
+      "Professional Communication"
+    ],
+    "Semester 2": [
+      "Engineering Mathematics II",
+      "Data Structures",
+      "Discrete Computational Structures",
+      "Programming Paradigms",
+      "Digital System Design",
+      "Sustainable Engineering"
+    ],
+    "Semester 3": [
+      "Engineering Mathematics III",
+      "Logic System Design",
+      "Object Oriented Programming",
+      "Principles of Programming Languages",
+      "Data Communication",
+      "Logic System Design Lab",
+      "Programming Lab"
+    ],
+    "Semester 4": [
+      "Engineering Mathematics IV",
+      "Computer Organization and Architecture",
+      "Database Management Systems",
+      "Operating Systems",
+      "Theory of Computation",
+      "Database Management Systems Lab",
+      "Operating Systems Lab"
+    ],
+    "Semester 5": [
+      "Computer Networks",
+      "System Software",
+      "Microprocessors and Microcontrollers",
+      "Formal Languages and Automata Theory",
+      "Software Engineering",
+      "Networks Lab",
+      "Microprocessor Lab"
+    ],
+    "Semester 6": [
+      "Compiler Design",
+      "Computer Graphics and Multimedia",
+      "Design and Analysis of Algorithms",
+      "Web Technologies",
+      "Elective I",
+      "Compiler Design Lab",
+      "Web Technologies Lab"
+    ],
+    "Semester 7": [
+      "Distributed Systems",
+      "Information Security",
+      "Machine Learning",
+      "Elective II",
+      "Elective III",
+      "Project Design",
+      "Seminar"
+    ],
+    "Semester 8": [
+      "Elective IV",
+      "Project Implementation",
+      "Viva Voce"
+    ]
+  }
+}

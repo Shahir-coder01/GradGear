@@ -1,0 +1,536 @@
+/* GradeGarage.css */
+:root {
+    --primary-green: #00a86b;
+    --dark-bg: #121212;
+    --card-bg: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --accent-blue: #3a86ff;
+  }
+  
+  .grade-garage-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--text-primary);
+  }
+  
+  .grade-garage-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .grade-garage-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-green);
+  }
+  
+  .grade-garage-header p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+  }
+  
+  /* CGPA Banner - Updated to match the image */
+  .cgpa-banner {
+    background-color: var(--primary-green);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 0 auto 2.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    text-align: center;
+  }
+  
+  .cgpa-value h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .cgpa-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .error-message {
+    background-color: rgba(255, 87, 87, 0.2);
+    color: #ff5757;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .grade-garage-actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Add Semester Button - Updated to match the image */
+  .add-semester-button {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 168, 107, 0.2);
+  }
+  
+  .add-semester-button:hover {
+    background-color: #008f5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 168, 107, 0.3);
+  }
+  
+  .add-semester-form {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .add-semester-form input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.95rem;
+  }
+  
+  .action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .action-button.save {
+    background-color: var(--primary-green);
+    color: white;
+  }
+  
+  .action-button.save:hover {
+    background-color: #008f5a;
+  }
+  
+  .action-button.cancel {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .action-button.cancel:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .action-button.edit {
+    background-color: rgba(58, 134, 255, 0.2);
+    color: var(--accent-blue);
+  }
+  
+  .action-button.edit:hover {
+    background-color: rgba(58, 134, 255, 0.3);
+  }
+  
+  .action-button.delete {
+    background-color: rgba(255, 87, 87, 0.2);
+    color: #ff5757;
+  }
+  
+  .action-button.delete:hover {
+    background-color: rgba(255, 87, 87, 0.3);
+  }
+  
+  /* Semester Grid - Updated to match the image */
+  .semesters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Semester Card - Updated to match the image */
+  .semester-card {
+    background-color: rgba(30, 30, 30, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .semester-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Semester Header - Updated to match the image */
+  .semester-header {
+    background-color: rgba(0, 168, 107, 0.1);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .semester-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--primary-green);
+  }
+  
+  .delete-semester-button {
+    background: none;
+    border: none;
+    color: rgba(255, 87, 87, 0.7);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .delete-semester-button:hover {
+    color: #ff5757;
+  }
+  
+  .subjects-container {
+    padding: 1.25rem;
+  }
+
+  .branch-container {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Subject Item - Updated to match the image */
+  .subject-item {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0rem;
+  }
+  
+  .subject-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  /* Subject Display - Updated to match the image */
+  .subject-display {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .subject-name {
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .subject-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subject-marks,
+  .subject-credits {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .marks-label,
+  .credits-label {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+  }
+  
+  .marks-value,
+  .credits-value {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  /* Grade Display - Updated to match the image */
+  .subject-grade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-weight: 600;
+  }
+  
+
+  
+  .subject-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+  }
+  
+  /* Subject Form - Updated for dropdowns and layout */
+  .subject-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .subject-edit-form input,
+  .subject-edit-form select {
+    padding: 0.5rem;
+    background-color: #121212;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+  .edit-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+  }
+  
+  /* Add Subject Button - Updated to match the image */
+  .add-subject-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgba(0, 168, 107, 0.1);
+    color: var(--primary-green);
+    border: 1px dashed rgba(0, 168, 107, 0.3);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+  }
+  
+  .add-subject-button:hover {
+    background-color: rgba(0, 168, 107, 0.2);
+  }
+  
+  /* Add Subject Form - Updated for dropdowns */
+  .add-subject-form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .add-subject-form input,
+  .add-subject-form select {
+    padding: 0.5rem;
+    background-color: #121212;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+  .add-subject-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+  }
+  
+  /* Mark/Credits Group - For the side-by-side inputs */
+  .marks-credits-group {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .input-group {
+    flex: 1;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Semester Footer - Updated to match the image */
+  .semester-footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .sgpa-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .sgpa-display span {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  
+  .sgpa-display strong {
+    font-size: 1.2rem;
+    color: var(--primary-green);
+  }
+  
+  .empty-state {
+    text-align: center;
+    background-color: #1e1e1e;
+    padding: 3rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+  }
+  
+  .empty-state h2 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .empty-state p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .grade-garage-loading,
+  .grade-garage-unauthorized {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0, 168, 107, 0.2);
+    border-top-color: var(--primary-green);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Subject dropdown styles */
+  .add-subject-form select,
+  .subject-edit-form select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #121212;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.9rem;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 0.65rem auto;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .semesters-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .marks-credits-group {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .subject-details {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+  
+  /* Animation for grade changes */
+  @keyframes grade-highlight {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  .subject-grade {
+    animation: grade-highlight 0.5s ease;
+  }
+
+  /* Branch selector styles */
+.branch-selector {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.branch-selector label {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.branch-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+  background-color: white;
+  font-size: 16px;
+  color: #2d3748;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  width: 250px;
+}
+
+.branch-select:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+}
+
+/* Add animation for branch change */
+.semesters-grid {
+  transition: opacity 0.3s ease;
+}
+
+.branch-changing .semesters-grid {
+  opacity: 0.6;
+}

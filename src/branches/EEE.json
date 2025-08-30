@@ -1,0 +1,73 @@
+{
+    "name": "Electrical & Electronics Engineering",
+    "code": "EEE",
+    "semesters": {
+      "Semester 1": [
+        "Engineering Mathematics I",
+        "Engineering Physics",
+        "Engineering Chemistry",
+        "Engineering Graphics",
+        "Basics of Electrical Engineering",
+        "Engineering Mechanics",
+        "Professional Communication"
+      ],
+      "Semester 2": [
+        "Engineering Mathematics II",
+        "Circuit Theory",
+        "Electrical Measurements",
+        "Digital Electronics",
+        "Programming in C",
+        "Sustainable Engineering"
+      ],
+      "Semester 3": [
+        "Engineering Mathematics III",
+        "Electromagnetic Field Theory",
+        "Electronic Circuits",
+        "Electrical Machines I",
+        "Network Theory",
+        "Electronic Circuits Lab",
+        "Electrical Machines Lab I"
+      ],
+      "Semester 4": [
+        "Engineering Mathematics IV",
+        "Signals and Systems",
+        "Power Electronics",
+        "Electrical Machines II",
+        "Control Systems",
+        "Power Electronics Lab",
+        "Electrical Machines Lab II"
+      ],
+      "Semester 5": [
+        "Microprocessors and Microcontrollers",
+        "Power System Analysis",
+        "Digital Signal Processing",
+        "Modern Control Theory",
+        "Electrical Machine Design",
+        "Microprocessor Lab",
+        "Power System Lab"
+      ],
+      "Semester 6": [
+        "Power System Protection",
+        "High Voltage Engineering",
+        "Electrical Drives",
+        "Industrial Instrumentation",
+        "Elective I",
+        "Electrical Drives Lab",
+        "High Voltage Lab"
+      ],
+      "Semester 7": [
+        "Power System Operation and Control",
+        "Renewable Energy Systems",
+        "Electric Traction",
+        "Elective II",
+        "Elective III",
+        "Project Design",
+        "Seminar"
+      ],
+      "Semester 8": [
+        "Elective IV",
+        "Project Implementation",
+        "Viva Voce"
+      ]
+    }
+  }

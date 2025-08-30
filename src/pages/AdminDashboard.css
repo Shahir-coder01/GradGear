@@ -1,0 +1,1310 @@
+/* AdminDashboard.css - Dark Theme */
+:root {
+  --dark-bg: #121212;
+  --dark-sidebar: #1a1a1a;
+  --dark-card: #1e1e1e;
+  --dark-input: #2d2d2d;
+  --dark-border: #333;
+  --dark-text: #e0e0e0;
+  --dark-text-secondary: #aaa;
+  --dark-primary: #00a86b;
+  --dark-primary-hover: #008f5a;
+  --dark-error: #e57373;
+  --dark-success: #81c784;
+  --dark-warning: #ffb74d;
+}
+
+body {
+  margin: 0;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* Main Layout */
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 260px;
+  background-color: var(--dark-sidebar);
+  color: var(--dark-text);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.admin-sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.admin-sidebar-header h2 {
+  margin: 0;
+  color: var(--dark-primary);
+  font-size: 1.5rem;
+}
+
+.admin-sidebar-header p {
+  margin: 0.5rem 0 0 0;
+  color: var(--dark-text-secondary);
+  font-size: 0.9rem;
+}
+
+.admin-sidebar-menu {
+  flex: 1;
+  padding: 1.5rem 0;
+  overflow-y: auto;
+}
+
+.sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background: none;
+  color: var(--dark-text);
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.sidebar-menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-menu-item.active {
+  background-color: rgba(0, 168, 107, 0.1);
+  color: var(--dark-primary);
+  border-left: 3px solid var(--dark-primary);
+}
+
+.menu-icon {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.badge {
+  position: absolute;
+  right: 1.5rem;
+  background-color: var(--dark-primary);
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.admin-sidebar-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--dark-border);
+}
+
+.sidebar-logout-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--dark-border);
+  border-radius: 4px;
+  background: none;
+  color: var(--dark-error);
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidebar-logout-btn:hover {
+  background-color: rgba(229, 115, 115, 0.1);
+}
+
+/* Main Content */
+.admin-main-content {
+  flex: 1;
+  margin-left: 260px;
+  padding: 1.5rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-header-title h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  color: var(--dark-text);
+}
+
+.admin-header-title p {
+  margin: 0;
+  color: var(--dark-text-secondary);
+  font-size: 1rem;
+}
+
+.admin-status-tabs {
+  display: flex;
+  background-color: var(--dark-card);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.status-tab {
+  padding: 0.7rem 1.5rem;
+  background: none;
+  border: none;
+  color: var(--dark-text);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.status-tab:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.status-tab.active {
+  background-color: var(--dark-primary);
+  color: white;
+}
+
+.admin-user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-username {
+  font-weight: 500;
+  color: var(--dark-text);
+}
+
+/* Filters */
+.admin-content-wrapper {
+  background-color: var(--dark-card);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.admin-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--dark-border);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-search {
+  position: relative;
+  width: 300px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dark-text-secondary);
+}
+
+.admin-search input {
+  width: 100%;
+  padding: 0.7rem 1rem 0.7rem 2.5rem;
+  background-color: var(--dark-input);
+  border: 1px solid var(--dark-border);
+  border-radius: 4px;
+  color: var(--dark-text);
+  font-size: 0.9rem;
+}
+
+.admin-filter-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.admin-filter-select select {
+  padding: 0.7rem 2rem 0.7rem 1rem;
+  background-color: var(--dark-input);
+  border: 1px solid var(--dark-border);
+  border-radius: 4px;
+  color: var(--dark-text);
+  font-size: 0.9rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.75em;
+}
+
+.admin-reset-filters {
+  padding: 0.7rem 1.2rem;
+  background-color: var(--dark-input);
+  border: 1px solid var(--dark-border);
+  border-radius: 4px;
+  color: var(--dark-text);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admin-reset-filters:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Loading State */
+.admin-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.admin-loader {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid var(--dark-primary);
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.admin-error {
+  padding: 2rem;
+  text-align: center;
+  color: var(--dark-error);
+}
+
+.admin-error button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  background-color: var(--dark-error);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Items Table */
+.admin-items-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--dark-text);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--dark-border);
+  color: var(--dark-text);
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-badge.pending {
+  background-color: rgba(255, 183, 77, 0.2);
+  color: var(--dark-warning);
+}
+
+.status-badge.approved {
+  background-color: rgba(129, 199, 132, 0.2);
+  color: var(--dark-success);
+}
+
+.status-badge.rejected {
+  background-color: rgba(229, 115, 115, 0.2);
+  color: var(--dark-error);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.view-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--dark-text);
+}
+
+.view-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.approve-btn {
+  background-color: rgba(129, 199, 132, 0.2);
+  color: var(--dark-success);
+}
+
+.approve-btn:hover {
+  background-color: rgba(129, 199, 132, 0.3);
+}
+
+.reject-btn {
+  background-color: rgba(229, 115, 115, 0.2);
+  color: var(--dark-error);
+}
+
+.reject-btn:hover {
+  background-color: rgba(229, 115, 115, 0.3);
+}
+
+.admin-no-items {
+  padding: 3rem;
+  text-align: center;
+  color: var(--dark-text-secondary);
+}
+
+/* Modal */
+.admin-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.admin-modal {
+  background-color: var(--dark-card);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.admin-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--dark-border);
+}
+
+.admin-modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--dark-primary);
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  color: var(--dark-text);
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.admin-modal-body {
+  padding: 1.5rem;
+}
+
+.item-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.detail-item {
+  margin-bottom: 1.5rem;
+}
+
+.detail-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.detail-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: var(--dark-text-secondary);
+}
+
+.detail-item p, .detail-item a {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--dark-text);
+  word-break: break-word;
+}
+
+.detail-item a {
+  color: var(--dark-primary);
+  text-decoration: none;
+}
+
+.detail-item a:hover {
+  text-decoration: underline;
+}
+
+.status-text {
+  font-weight: 500;
+}
+
+.status-text.pending {
+  color: var(--dark-warning);
+}
+
+.status-text.approved {
+  color: var(--dark-success);
+}
+
+.status-text.rejected {
+  color: var(--dark-error);
+}
+
+.item-preview {
+  grid-column: 1 / -1;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--dark-border);
+  padding-top: 1.5rem;
+}
+
+.item-preview h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: var(--dark-text);
+}
+
+.video-preview-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  background-color: #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.video-preview-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.external-link-btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background-color: var(--dark-primary);
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.external-link-btn:hover {
+  background-color: var(--dark-primary-hover);
+}
+
+.admin-modal-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--dark-border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.modal-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal-btn.approve-btn {
+  background-color: var(--dark-success);
+  border: none;
+  color: white;
+}
+
+.modal-btn.approve-btn:hover {
+  background-color: #66bb6a;
+}
+
+.modal-btn.reject-btn {
+  background-color: var(--dark-error);
+  border: none;
+  color: white;
+}
+
+.modal-btn.reject-btn:hover {
+  background-color: #ef5350;
+}
+
+/* Reject Form Modal */
+.reject-modal {
+  max-width: 500px;
+}
+
+.reject-info {
+  margin: 0 0 1.5rem 0;
+  color: var(--dark-text);
+  line-height: 1.5;
+}
+
+.reject-reason-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--dark-input);
+  border: 1px solid var(--dark-border);
+  border-radius: 4px;
+  color: var(--dark-text);
+  font-size: 0.9rem;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.modal-btn.cancel-btn {
+  background-color: transparent;
+  border: 1px solid var(--dark-border);
+  color: var(--dark-text);
+}
+
+.modal-btn.cancel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.modal-btn.confirm-reject-btn {
+  background-color: var(--dark-error);
+  border: none;
+  color: white;
+}
+
+.modal-btn.confirm-reject-btn:hover {
+  background-color: #ef5350;
+}
+
+.modal-btn.confirm-reject-btn:disabled {
+  background-color: rgba(229, 115, 115, 0.5);
+  cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .admin-sidebar {
+    width: 60px;
+    overflow: hidden;
+  }
+  
+  .admin-sidebar-header h2,
+  .admin-sidebar-header p,
+  .sidebar-menu-item span,
+  .sidebar-logout-btn span {
+    display: none;
+  }
+  
+  .menu-icon {
+    margin-right: 0;
+  }
+  
+  .badge {
+    right: 5px;
+  }
+  
+  .admin-main-content {
+    margin-left: 60px;
+  }
+  
+  .sidebar-logout-btn {
+    justify-content: center;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .admin-filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .admin-search {
+    width: 100%;
+  }
+  
+  .admin-filter-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .item-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-main-content {
+    padding: 1rem;
+  }
+  
+  .admin-status-tabs {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .status-tab {
+    flex: 1;
+    padding: 0.7rem 0.5rem;
+  }
+  
+  .admin-filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .admin-filter-select, .admin-reset-filters {
+    width: 100%;
+  }
+  
+  .admin-modal-footer {
+    flex-direction: column;
+  }
+  
+  .modal-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Enhanced Action Buttons for Admin Dashboard */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* View Button */
+.view-btn {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+.view-btn:hover {
+  background-color: #3c3c3c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Approve Button */
+.approve-btn {
+  background-color: rgba(0, 168, 107, 0.2);
+  color: #00a86b;
+  border: 1px solid rgba(0, 168, 107, 0.3);
+}
+
+.approve-btn:hover {
+  background-color: rgba(0, 168, 107, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 168, 107, 0.3);
+}
+
+/* Reject Button */
+.reject-btn {
+  background-color: rgba(229, 115, 115, 0.2);
+  color: #e57373;
+  border: 1px solid rgba(229, 115, 115, 0.3);
+}
+
+.reject-btn:hover {
+  background-color: rgba(229, 115, 115, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(229, 115, 115, 0.3);
+}
+
+/* Modal Buttons */
+.modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-btn .btn-icon {
+  font-size: 1rem;
+}
+
+.modal-btn.approve-btn {
+  background-color: #00a86b;
+  border: none;
+  color: white;
+}
+
+.modal-btn.approve-btn:hover {
+  background-color: #008f5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 168, 107, 0.4);
+}
+
+.modal-btn.reject-btn {
+  background-color: #e57373;
+  border: none;
+  color: white;
+}
+
+.modal-btn.reject-btn:hover {
+  background-color: #ef5350;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 115, 115, 0.4);
+}
+
+.modal-btn.cancel-btn {
+  background-color: #2d2d2d;
+  border: 1px solid #444;
+  color: #e0e0e0;
+}
+
+.modal-btn.cancel-btn:hover {
+  background-color: #3d3d3d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.modal-btn.confirm-reject-btn {
+  background-color: #e57373;
+  border: none;
+  color: white;
+}
+
+.modal-btn.confirm-reject-btn:hover {
+  background-color: #ef5350;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 115, 115, 0.4);
+}
+
+.modal-btn.confirm-reject-btn:disabled {
+  background-color: rgba(229, 115, 115, 0.5);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Active Effects */
+.action-btn:active, .modal-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Button tooltips */
+.action-btn {
+  position: relative;
+}
+
+.action-btn::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.action-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+  bottom: -25px;
+}
+
+/* Focus states for accessibility */
+.action-btn:focus, .modal-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 168, 107, 0.5);
+}
+
+.reject-btn:focus {
+  box-shadow: 0 0 0 2px rgba(229, 115, 115, 0.5);
+}
+
+/* Enhanced Action Buttons for Admin Dashboard with Icons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icon styling */
+.action-btn svg {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.2s ease;
+}
+
+/* Icon glow effect */
+.action-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.action-btn:hover::before {
+  width: 150%;
+  height: 150%;
+}
+
+.action-btn:hover svg {
+  transform: scale(1.2);
+}
+
+/* View Button */
+.view-btn {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+.view-btn:hover {
+  background-color: #3c3c3c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.view-btn::after {
+  content: "View";
+}
+
+/* Approve Button */
+.approve-btn {
+  background-color: rgba(0, 168, 107, 0.2);
+  color: #00a86b;
+  border: 1px solid rgba(0, 168, 107, 0.3);
+}
+
+.approve-btn:hover {
+  background-color: rgba(0, 168, 107, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 168, 107, 0.3);
+}
+
+.approve-btn::after {
+  content: "Approve";
+}
+
+/* Reject Button */
+.reject-btn {
+  background-color: rgba(229, 115, 115, 0.2);
+  color: #e57373;
+  border: 1px solid rgba(229, 115, 115, 0.3);
+}
+
+.reject-btn:hover {
+  background-color: rgba(229, 115, 115, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(229, 115, 115, 0.3);
+}
+
+.reject-btn::after {
+  content: "Reject";
+}
+
+/* Modal Buttons */
+.modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icon styling for modal buttons */
+.modal-btn .btn-icon {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+/* Icon glow effect for modal buttons */
+.modal-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.7s ease;
+}
+
+.modal-btn:hover::before {
+  left: 100%;
+}
+
+.modal-btn:hover .btn-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.modal-btn.approve-btn {
+  background-color: #00a86b;
+  border: none;
+  color: white;
+}
+
+.modal-btn.approve-btn:hover {
+  background-color: #008f5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 168, 107, 0.4);
+}
+
+.modal-btn.reject-btn {
+  background-color: #e57373;
+  border: none;
+  color: white;
+}
+
+.modal-btn.reject-btn:hover {
+  background-color: #ef5350;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 115, 115, 0.4);
+}
+
+.modal-btn.cancel-btn {
+  background-color: #2d2d2d;
+  border: 1px solid #444;
+  color: #e0e0e0;
+}
+
+.modal-btn.cancel-btn:hover {
+  background-color: #3d3d3d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.modal-btn.confirm-reject-btn {
+  background-color: #e57373;
+  border: none;
+  color: white;
+}
+
+.modal-btn.confirm-reject-btn:hover {
+  background-color: #ef5350;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 115, 115, 0.4);
+}
+
+.modal-btn.confirm-reject-btn:disabled {
+  background-color: rgba(229, 115, 115, 0.5);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.modal-btn.confirm-reject-btn:disabled .btn-icon {
+  transform: none;
+}
+
+/* Active Effects */
+.action-btn:active, .modal-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Button tooltips */
+.action-btn {
+  position: relative;
+}
+
+.action-btn::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.action-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+  bottom: -25px;
+}
+
+/* Focus states for accessibility */
+.action-btn:focus, .modal-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 168, 107, 0.5);
+}
+
+.reject-btn:focus {
+  box-shadow: 0 0 0 2px rgba(229, 115, 115, 0.5);
+}
+
+/* Add these to your HTML for additional buttons with icons */
+.modal-footer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom button with icon examples */
+.view-details-btn {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+.view-details-btn:hover {
+  background-color: #3c3c3c;
+  transform: translateY(-2px);
+}
+
+.view-details-btn .btn-icon {
+  color: #00a86b;
+}
+
+.download-btn {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+.download-btn:hover {
+  background-color: #3c3c3c;
+  transform: translateY(-2px);
+}
+
+.download-btn .btn-icon {
+  color: #4a90e2;
+}
+
+/* Animation for button icons */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.modal-btn:hover .btn-icon {
+  animation: pulse 1s infinite;
+}
+/* Action buttons styling */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Reset and redefine action buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+}
+
+/* View button - gray */
+.view-btn {
+  background-color: #4b4b4b !important;
+}
+
+/* Approve button - green */
+.approve-btn {
+  background-color: #00a86b !important;
+}
+
+/* Reject button - red */
+.reject-btn {
+  background-color: #e57373 !important;
+}
+
+/* Force SVG icons to be visible */
+.action-btn svg {
+  fill: white !important;
+  stroke: white !important;
+  width: 18px !important;
+  height: 18px !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 10 !important;
+}

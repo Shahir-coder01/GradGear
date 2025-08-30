@@ -1,0 +1,187 @@
+/* AdminLogin.css */
+.admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 20px;
+}
+
+.admin-login-card {
+  background-color: #0f3460;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px;
+  padding: 2.5rem;
+  color: white;
+}
+
+.admin-login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.admin-login-header h1 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+  color: #e94560;
+}
+
+.admin-login-header p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.admin-login-error {
+  background-color: rgba(255, 0, 0, 0.1);
+  border-left: 4px solid #e94560;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: #e94560;
+  border-radius: 4px;
+}
+
+.admin-login-form {
+  margin-bottom: 1.5rem;
+}
+
+.admin-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.admin-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.admin-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.admin-input-icon {
+  position: absolute;
+  left: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.admin-input-container input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.admin-input-container input:focus {
+  outline: none;
+  border-color: #e94560;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px rgba(233, 69, 96, 0.2);
+}
+
+.admin-input-container input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle:hover {
+  color: white;
+}
+
+.admin-login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #e94560;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.admin-login-button:hover {
+  background-color: #d13652;
+}
+
+.admin-login-button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.admin-login-footer {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+}
+
+.admin-login-footer p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.back-to-main {
+  color: #e94560;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-to-main:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .admin-login-card {
+    padding: 1.5rem;
+  }
+  
+  .admin-login-header h1 {
+    font-size: 1.5rem;
+  }
+}
+/* Fix for action buttons */
+.action-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+.view-btn {
+  background-color: #4b4b4b;
+}
+
+.approve-btn {
+  background-color: #00a86b;
+}
+
+.reject-btn {
+  background-color: #e57373;
+}

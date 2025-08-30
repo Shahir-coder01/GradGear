@@ -1,0 +1,73 @@
+{
+    "name": "Electronics & Communication Engineering",
+    "code": "ECE",
+    "semesters": {
+      "Semester 1": [
+        "Engineering Mathematics I",
+        "Engineering Physics",
+        "Engineering Chemistry",
+        "Engineering Graphics",
+        "Basics of Electronics Engineering",
+        "Engineering Mechanics",
+        "Professional Communication"
+      ],
+      "Semester 2": [
+        "Engineering Mathematics II",
+        "Circuit Theory",
+        "Semiconductor Devices",
+        "Digital Electronics",
+        "Programming in C",
+        "Sustainable Engineering"
+      ],
+      "Semester 3": [
+        "Engineering Mathematics III",
+        "Signals and Systems",
+        "Analog Electronic Circuits",
+        "Network Theory",
+        "Digital System Design",
+        "Electronic Circuits Lab",
+        "Digital Design Lab"
+      ],
+      "Semester 4": [
+        "Engineering Mathematics IV",
+        "Electromagnetic Field Theory",
+        "Communication Systems",
+        "Microprocessors and Microcontrollers",
+        "Control Systems",
+        "Communication Lab",
+        "Microprocessor Lab"
+      ],
+      "Semester 5": [
+        "Digital Signal Processing",
+        "Analog Communication",
+        "VLSI Design",
+        "Antenna and Wave Propagation",
+        "Information Theory and Coding",
+        "DSP Lab",
+        "VLSI Lab"
+      ],
+      "Semester 6": [
+        "Digital Communication",
+        "Computer Networks",
+        "Microwave Engineering",
+        "Embedded Systems",
+        "Elective I",
+        "Communication Systems Lab",
+        "Embedded Systems Lab"
+      ],
+      "Semester 7": [
+        "Optical Communication",
+        "Wireless Communication",
+        "Satellite Communication",
+        "Elective II",
+        "Elective III",
+        "Project Design",
+        "Seminar"
+      ],
+      "Semester 8": [
+        "Elective IV",
+        "Project Implementation",
+        "Viva Voce"
+      ]
+    }
+  }

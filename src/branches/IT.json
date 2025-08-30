@@ -1,0 +1,73 @@
+{
+  "name": "Information Technology",
+  "code": "IT",
+  "semesters": {
+    "Semester 1": [
+      "Engineering Mathematics I",
+      "Basic Electrical Engineering",
+      "Engineering Physics",
+      "Programming for Problem Solving",
+      "Engineering Graphics",
+      "Environmental Science",
+      "Language and Communication Skills"
+    ],
+    "Semester 2": [
+      "Engineering Mathematics II",
+      "Digital Logic Design",
+      "Data Structures",
+      "Computer Organization",
+      "Object Oriented Programming",
+      "Data Structures Lab",
+      "OOP Lab"
+    ],
+    "Semester 3": [
+      "Discrete Mathematics",
+      "Database Management Systems",
+      "Computer Networks",
+      "Design and Analysis of Algorithms",
+      "Software Engineering",
+      "DBMS Lab",
+      "Algorithms Lab"
+    ],
+    "Semester 4": [
+      "Operating Systems",
+      "Web Technologies",
+      "Microprocessors and Interfacing",
+      "Theory of Computation",
+      "Open Elective I",
+      "Operating Systems Lab",
+      "Web Technologies Lab"
+    ],
+    "Semester 5": [
+      "Machine Learning",
+      "Information Security",
+      "Compiler Design",
+      "Internet of Things",
+      "Elective I",
+      "Machine Learning Lab",
+      "Compiler Design Lab"
+    ],
+    "Semester 6": [
+      "Mobile Application Development",
+      "Cloud Computing",
+      "Data Mining",
+      "Open Elective II",
+      "Elective II",
+      "Cloud Computing Lab",
+      "Mobile App Development Lab"
+    ],
+    "Semester 7": [
+      "Big Data Analytics",
+      "Cyber Security",
+      "Blockchain Technology",
+      "Elective III",
+      "Project Phase I",
+      "Seminar"
+    ],
+    "Semester 8": [
+      "Elective IV",
+      "Project Phase II",
+      "Comprehensive Viva"
+    ]
+  }
+}
